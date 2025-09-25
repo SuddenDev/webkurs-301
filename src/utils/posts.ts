@@ -1,12 +1,12 @@
-import type { CollectionPosts, PostKey } from '@/types'
+import type { Course } from '@/types'
 import { getCollection } from 'astro:content'
 
-export function sortPostsByDate(itemA: CollectionPosts, itemB: CollectionPosts) {
+export function sortPostsByDate(itemA: Course, itemB: Course) {
   return new Date(itemB.data.date).getTime() - new Date(itemA.data.date).getTime()
 }
 
-export async function getPosts(path?: string, collection: PostKey = 'course') {
+export async function getCourses(path?: string, collection: 'course' = 'course') {
   return (await getCollection(collection, (post) => {
-    return (import.meta.env.PROD ? post.data.draft !== true : true) && (path ? post.slug.includes(path) : true)
+    return (import.meta.env.PROD ? post.data.draft !== true : true) && (path ? post.id.includes(path) : true)
   })).sort(sortPostsByDate)
 }

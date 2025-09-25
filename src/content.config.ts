@@ -1,6 +1,8 @@
+import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 
 const pages = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -14,10 +16,10 @@ const pages = defineCollection({
 })
 
 const course = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/course' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    duration: z.string().optional(),
     image: z
       .object({
         src: z.string(),
@@ -34,9 +36,7 @@ const course = defineCollection({
       })),
     draft: z.boolean().default(false).optional(),
     lang: z.string().default('de-DE').optional(),
-    tag: z.string().optional().optional(),
     redirect: z.string().optional(),
-    video: z.boolean().default(false).optional(),
   }),
 })
 

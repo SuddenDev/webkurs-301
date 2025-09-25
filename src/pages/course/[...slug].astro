@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { type CollectionPosts } from '@/types'
-import { getPosts } from '@/utils/posts'
+import type { Course } from '@/types'
+import { getCourses } from '@/utils/posts'
+import { render } from 'astro:content'
 
 export async function getStaticPaths() {
-  const posts = await getPosts()
+  const posts = await getCourses()
   return posts.map((post) => {
     return {
-      params: { slug: post.slug },
+      params: { slug: post.id },
       props: {
         post,
       },
@@ -15,12 +16,12 @@ export async function getStaticPaths() {
   })
 }
 
-type Props = { post: CollectionPosts }
+type Props = { post: Course }
 
 const { post } = Astro.props
-const { title, image, description, date, duration, tag } = post.data
+const { title, image, description, date } = post.data
 
-const { Content } = await post.render()
+const { Content } = await render(post)
 
 function getDate(date: string) {
   return new Date(date).toISOString()
@@ -32,8 +33,6 @@ function getDate(date: string) {
     <h1>{title}</h1>
     <p op-50>
       {date && <time datetime={getDate(date)}>{date.split(',')}</time>}
-      {duration && <span>· {duration}</span>}
-      {tag && <span>· {tag}</span>}
     </p>
     {
       image && (

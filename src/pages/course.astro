@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ListLessons from '@/components/ListLessons.vue'
-import { getPosts } from '@/utils/posts'
+import { getCourses } from '@/utils/posts'
 
-const posts = await getPosts()
+const posts = await getCourses()
 ---
 
 <BaseLayout title="Kursinhalte" description="Alle Unterrichtseinheiten">

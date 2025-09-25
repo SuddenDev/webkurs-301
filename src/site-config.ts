@@ -11,10 +11,10 @@ export const siteConfig = {
   email: 'dominik.tampe@hm.edu',
   socialLinks: [
     {
-      text: 'Website',
+      text: 'dtampe.com',
       href: 'https://dtampe.com',
-      icon: 'i-ph-globe',
-      header: 'i-ph-globe',
+      icon: '',
+      // icon: 'i-ph-globe',
     },
   ],
   header: {

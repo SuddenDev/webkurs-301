@@ -8,18 +8,7 @@ import ThemeToggle from './ThemeToggle.vue'
 const navLinks = siteConfig.header.navLinks || []
 
 const socialLinks = computed(() => {
-  return siteConfig.socialLinks.filter((link: Record<string, any>) => {
-    if (link.header && typeof link.header === 'boolean') {
-      return link
-    }
-    else if (link.header && typeof link.header === 'string') {
-      link.icon = link.header.includes('i-') ? link.header : link.icon
-      return link
-    }
-    else {
-      return false
-    }
-  })
+  return siteConfig.socialLinks
 })
 
 const { y: scroll } = useWindowScroll()
@@ -62,7 +51,7 @@ onMounted(() => {
 <template>
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }" view-transition-name="site-header"
-    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex items-center relative gap-4"
+    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex items-center relative gap-4 md:gap-6"
   >
     <!-- Site name on the left -->
     <div class="flex items-center">
@@ -75,8 +64,8 @@ onMounted(() => {
     </div>
 
     <!-- Navigation links in the center -->
-    <div class="flex-1 flex justify-end md:justify-center">
-      <nav class="flex gap-x-4 sm:gap-x-2">
+    <div class="flex-1 flex justify-end md:(justify-start)">
+      <nav class="flex gap-x-4 sm:gap-x-2 md:(pl-4 b-l border-main)">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
           :href="link.href"
@@ -88,11 +77,13 @@ onMounted(() => {
     </div>
 
     <!-- Website link and theme toggle on the right -->
-    <div class="flex gap-x-4 items-center">
+    <div class="flex gap-x-4 items-center md:pr-4">
       <a
-        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="`${link.icon} hidden sm:inline-block`" nav-link
-        :target="getLinkTarget(link.href)" :href="link.href"
-      />
+        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`"
+        :class="`${link.icon === '' ? 'text-sm' : 'link-icon'} hidden sm:inline-block`" class="nav-link" :target="getLinkTarget(link.href)"
+        :href="link.href"
+      >{{ link.icon === "" ? link.text : "" }}</a>
+
       <ThemeToggle />
     </div>
   </header>
