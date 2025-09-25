@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import siteConfig from '@/site-config'
-import { getLinkTarget } from '@/utils/link'
 import { useWindowScroll } from '@vueuse/core'
 import { computed, onMounted, ref, unref } from 'vue'
+import siteConfig from '@/site-config'
+import { getLinkTarget } from '@/utils/link'
 import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = siteConfig.header.navLinks || []
@@ -57,67 +57,45 @@ onMounted(() => {
     }
   })
 })
-
-function toggleNavDrawer() {
-  const drawer = document.querySelector('.nav-drawer') as HTMLElement
-  const mask = document.querySelector('.nav-drawer-mask') as HTMLElement
-  if (!drawer || !mask)
-    return
-  if (drawer.style.transform === `translateX(0%)`) {
-    drawer.style.transform = `translateX(-100%)`
-    mask.style.display = `none`
-  }
-  else {
-    drawer.style.transform = `translateX(0%)`
-    mask.style.display = `block`
-  }
-}
 </script>
 
 <template>
   <header
-    id="header" :class="{ 'header-bg-blur': scroll > 20 }"
-    view-transition-name="site-header"
-    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex justify-between items-center relative"
+    id="header" :class="{ 'header-bg-blur': scroll > 20 }" view-transition-name="site-header"
+    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex items-center relative gap-4"
   >
-    <div class="flex items-center h-full">
-      <a href="/" mr-6 aria-label="Header Logo Image">
-        <img width="32" height="32" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+    <!-- Site name on the left -->
+    <div class="flex items-center">
+      <a href="/" class="hidden sm:inline-block" aria-label="Header Logo">
+        Digitalkompetenzen
       </a>
-      <nav class="sm:flex hidden flex-wrap gap-x-6 position-initial flex-row">
+      <a href="/" class="sm:hidden" aria-label="Header Logo" title="Digitalkompetenz">
+        Dig.Kom.
+      </a>
+    </div>
+
+    <!-- Navigation links in the center -->
+    <div class="flex-1 flex justify-end md:justify-center">
+      <nav class="flex gap-x-4 sm:gap-x-2">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
-          nav-link :href="link.href"
+          :href="link.href"
+          class="text-link opacity-70 hover:opacity-100 transition-all duration-200 cursor-pointer sm:(py-2 px-3) rounded-lg hover:bg-black/10 hover:dark:bg-slate-600/40 backdrop-blur-xl"
         >
           {{ link.text }}
         </a>
       </nav>
-      <div sm:hidden h-full flex items-center @click="toggleNavDrawer()">
-        <menu i-ri-menu-2-fill />
-      </div>
     </div>
-    <div class="flex gap-x-6">
+
+    <!-- Website link and theme toggle on the right -->
+    <div class="flex gap-x-4 items-center">
       <a
-        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
+        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="`${link.icon} hidden sm:inline-block`" nav-link
         :target="getLinkTarget(link.href)" :href="link.href"
       />
-
-      <a nav-link target="_blank" href="/rss.xml" i-ri-rss-line aria-label="RSS" />
       <ThemeToggle />
     </div>
   </header>
-  <nav
-    class="nav-drawer sm:hidden"
-  >
-    <i i-ri-menu-2-fill />
-    <a
-      v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
-      nav-link :href="link.href" @click="toggleNavDrawer()"
-    >
-      {{ link.text }}
-    </a>
-  </nav>
-  <div class="nav-drawer-mask" @click="toggleNavDrawer()" />
 </template>
 
 <style scoped>
@@ -134,18 +112,5 @@ function toggleNavDrawer() {
   transform: translateX(-100%);
   --at-apply: box-border fixed h-screen z-999 left-0 top-0 min-w-32vw max-w-50vw bg-main p-6 text-lg flex flex-col gap-5
     transition-all;
-}
-
-.nav-drawer-mask {
-  display: none;
-  --at-apply: transition-all;
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 998;
 }
 </style>

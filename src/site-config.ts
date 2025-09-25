@@ -1,99 +1,45 @@
 export const siteConfig = {
-  author: 'Kieran Wang',
-  title: 'Vitesse theme for Astro',
-  subtitle: 'Vitesse theme for Astro, supports Vue and UnoCSS.',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
+  author: 'Dominik Tampe',
+  authorUrl: 'https://dtampe.com',
+  title: 'Digitalkompetenz Kurs für Fotograf:innen',
+  subtitle: 'Gelehrt an der Hochschule München, FK 12',
+  description: 'Ein Kurs um Fotograf:innen Webentwicklung näher zu bringen.',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
   },
-  email: 'kieranwme@gmail.com',
+  email: 'dominik.tampe@hm.edu',
   socialLinks: [
     {
-      text: 'GitHub',
-      href: 'https://github.com/kieranwv/astro-theme-vitesse',
-      icon: 'i-simple-icons-github',
-      header: 'i-ri-github-line',
-    },
-    {
-      text: 'Twitter',
-      href: '',
-      icon: 'i-simple-icons-x',
-      header: 'i-ri-twitter-x-line',
-    },
-    {
-      text: 'Linkedin',
-      href: '',
-      icon: 'i-simple-icons-linkedin',
-    },
-    {
-      text: 'Instagram',
-      href: '',
-      icon: 'i-simple-icons-instagram',
-    },
-    {
-      text: 'Youtube',
-      href: '',
-      icon: 'i-simple-icons-youtube',
+      text: 'Website',
+      href: 'https://dtampe.com',
+      icon: 'i-ph-globe',
+      header: 'i-ph-globe',
     },
   ],
   header: {
-    logo: {
-      src: '/favicon.svg',
-      alt: 'Logo Image',
-    },
     navLinks: [
       {
-        text: 'Blog',
-        href: '/blog',
+        text: 'Kursinhalte',
+        href: '/course',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
-      },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
-      {
-        text: 'Projects',
-        href: '/projects',
+        text: 'Links',
+        href: '/links',
       },
     ],
   },
   page: {
-    blogLinks: [
-      {
-        text: 'Blog',
-        href: '/blog',
-      },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
-      },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
-    ],
   },
   footer: {
     navLinks: [
       {
-        text: 'Posts Props',
-        href: '/posts-props',
+        text: 'Kursinhalte',
+        href: '/course',
       },
       {
-        text: 'Markdown Style',
-        href: '/md-style',
-      },
-      {
-        text: 'View on Astro',
-        href: 'https://astro.build/themes/details/vitesse-theme-for-astro/',
-      },
-      {
-        text: 'GitHub Repository',
-        href: 'https://github.com/kieranwv/astro-theme-vitesse',
+        text: 'Links',
+        href: '/links',
       },
     ],
   },

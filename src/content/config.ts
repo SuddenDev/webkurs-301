@@ -13,7 +13,7 @@ const pages = defineCollection({
   }),
 })
 
-const blog = defineCollection({
+const course = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -33,11 +33,11 @@ const blog = defineCollection({
         day: 'numeric',
       })),
     draft: z.boolean().default(false).optional(),
-    lang: z.string().default('en-US').optional(),
+    lang: z.string().default('de-DE').optional(),
     tag: z.string().optional().optional(),
     redirect: z.string().optional(),
     video: z.boolean().default(false).optional(),
   }),
 })
 
-export const collections = { pages, blog }
+export const collections = { pages, course }

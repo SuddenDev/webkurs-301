@@ -28,13 +28,12 @@ function toggleTheme(event: MouseEvent) {
     Math.max(x, innerWidth - x),
     Math.max(y, innerHeight - y),
   )
-  // @ts-expect-error: Transition API
+
   if (!document.startViewTransition) {
     toggleDark()
     return
   }
 
-  // @ts-expect-error: Transition API
   const transition = document.startViewTransition(async () => {
     toggleDark()
   })
@@ -61,5 +60,5 @@ function toggleTheme(event: MouseEvent) {
 </script>
 
 <template>
-  <button :aria-label="isDark ? 'Dark Theme' : 'Light Theme'" nav-link dark:i-ri-moon-line i-ri-sun-line @click="toggleTheme" />
+  <button :aria-label="isDark ? 'Dark Theme' : 'Light Theme'" class="nav-link dark:i-ph-moon-bold i-ph-sun-bold" @click="toggleTheme" />
 </template>

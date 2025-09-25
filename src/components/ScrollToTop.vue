@@ -19,6 +19,6 @@ function toTop() {
     :class="scroll > 300 ? 'op75' : 'op0 pointer-events-none'"
     @click="toTop()"
   >
-    <i i-ri-arrow-up-line />
+    <i class="i-ph-arrow-up" />
   </button>
 </template>
