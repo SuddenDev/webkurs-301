@@ -219,7 +219,7 @@ img {
 - Schriftgrößen und Abstände ändern sich
 
 ![Responsive Beispiel](../../assets/01-repsonsive-example-dribbble.png)
-Bild Quelle: https://dribbble.com/shots/25237757-Essentials-Plant-E-commerce-Responsive-Design
+[Bild Quelle](https://dribbble.com/shots/25237757-Essentials-Plant-E-commerce-Responsive-Design)
 
 ---
 
