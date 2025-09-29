@@ -1,6 +1,7 @@
 ---
 title: Grundlagen und Einführung
 description: Erste Einführung in die Webentwicklung
+slides: https://www.figma.com/deck/4JQlEDCRQspZ8NqJ1uiadw
 date: 2025-09-26
 ---
 ## Agenda
@@ -84,19 +85,7 @@ Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten profession
 
 ![Diagram Internet](./../../assets/01-internet_diagram.png)
 
-### Was passiert, wenn ich eine URL eingeben?
-
-**Schritt für Schritt: www.instagram.com
-
-1. **DNS-Lookup:** Browser fragt "Wo ist instagram.com?"
-2. **IP-Adresse:** DNS antwortet "Bei 157.240.15.35"
-3. **Verbindung:** Browser kontaktiert diesen Server
-4. **Anfrage:** "Schick mir die Instagram-Startseite"
-5. **Antwort:** Server sendet HTML, CSS, JavaScript-Dateien
-6. **Darstellung:** Browser baut die Seite zusammen
-
 ---
-
 ## Domain, Hosting, Browser, DNS
 
 ### Domain
@@ -118,6 +107,18 @@ Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten profession
 - Wandelt Domainnamen in IP-Adressen um (z. B. `google.com`) in IP-Adressen (z. B. `142.250.184.14`)
 - Funktioniert wie ein „Telefonbuch des Internets“
 - Organisiert Domains hierarchisch und verteilt
+
+---
+### Was passiert, wenn ich eine URL eingeben?
+
+Schritt für Schritt: www.instagram.com
+
+1. **DNS-Lookup:** Browser fragt "Wo ist instagram.com?"
+2. **IP-Adresse:** DNS antwortet "Bei 157.240.15.35"
+3. **Verbindung:** Browser kontaktiert diesen Server
+4. **Anfrage:** "Schick mir die Instagram-Startseite"
+5. **Antwort:** Server sendet HTML, CSS, JavaScript-Dateien
+6. **Darstellung:** Browser baut die Seite zusammen
 
 ---
 
@@ -573,3 +574,12 @@ Unser finale Code sollte dann so aussehen:
 - Behalten Sie im Hinterkopf, dass Sie die ihr Portfolio selbst bauen müssen
 
 **Tipps:** Nutzen Sie die vorgestellten Quellen als Startpunkt
+
+
+---
+
+## Weiterführende Links:
+
+- [HTML einfach verstehen](https://www.schulhomepage.de/webdesign/html)
+- [Einstieg in HTML](https://wiki.selfhtml.org/wiki/Einstieg_in_HTML)
+- [Einstieg in CSS](https://wiki.selfhtml.org/wiki/Einstieg_in_CSS)

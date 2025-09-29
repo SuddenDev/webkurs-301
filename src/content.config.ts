@@ -20,6 +20,7 @@ const course = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    slides: z.string().url().optional(),
     image: z
       .object({
         src: z.string(),

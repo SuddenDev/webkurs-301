@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 type Props = { post: Course }
 
 const { post } = Astro.props
-const { title, image, description, date } = post.data
+const { title, image, description, date, slides } = post.data
 
 const { Content } = await render(post)
 
@@ -41,6 +41,17 @@ function getDate(date: string) {
         </p>
       )
     }
+    {
+      slides && (
+        <p>
+          <a class="button" href={slides} target="_blank">
+            <i class="i-ph-presentation" />
+            Präsentationsfolien
+          </a>
+        </p>
+      )
+    }
+    <hr />
     <Content />
     <script src="@/scripts/medium-zoom.js"></script>
   </article>
