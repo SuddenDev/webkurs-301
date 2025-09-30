@@ -1,15 +1,23 @@
-import mediumZoom from 'medium-zoom'
+import mediumZoom from 'medium-zoom/dist/pure'
+
+let zoomInstance = null
 
 /**
  * Initialize medium-zoom for all images within prose content
  * Integrates with the site's dark/light theme system and preserves Astro's image optimization
  */
 function initializeMediumZoom() {
+  const images = [...document.querySelectorAll('.prose img')].filter(el => el.src !== 'https://codesandbox.io/static/img/play-codesandbox.svg')
+
+  // If an instance already exists, detach it to avoid duplicates
+  // if (zoomInstance) {
+  //   zoomInstance.attach(images)
+  //   return zoomInstance
+  // }
+
   // Get the current theme from document class or data attribute
   const isDark = document.documentElement.classList.contains('dark')
     || document.querySelector('html').dataset.theme === 'dark'
-
-  const images = [...document.querySelectorAll('.prose img')].filter(el => el.src !== 'https://codesandbox.io/static/img/play-codesandbox.svg')
 
   // Configure medium-zoom for all prose images (preserves Astro optimization)
   const zoom = mediumZoom(images, {
@@ -46,8 +54,15 @@ function initializeMediumZoom() {
     attributeFilter: ['class', 'data-theme'],
   })
 
-  return zoom
+  zoomInstance = zoom
 }
 
 // Re-initialize on Astro page transitions
 document.addEventListener('astro:page-load', initializeMediumZoom)
+document.addEventListener('astro:before-swap', () => {
+  if (zoomInstance) {
+    console.log('Detaching medium-zoom from previous images')
+    zoomInstance.detach()
+    zoomInstance = null
+  }
+})
