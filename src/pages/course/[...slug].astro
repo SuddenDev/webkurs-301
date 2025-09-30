@@ -6,19 +6,21 @@ import { render } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = await getCourses()
-  return posts.map((post) => {
+  return posts.map((post, index) => {
     return {
       params: { slug: post.id },
       props: {
         post,
+        prev: index > 0 ? posts[index - 1] : null,
+        next: index < posts.length - 1 ? posts[index + 1] : null,
       },
     }
   })
 }
 
-type Props = { post: Course }
+type Props = { post: Course; prev: Course | null; next: Course | null }
 
-const { post } = Astro.props
+const { post, prev, next } = Astro.props
 const { title, image, description, date, slides } = post.data
 
 const { Content } = await render(post)
@@ -55,4 +57,26 @@ function getDate(date: string) {
     <Content />
     <script src="@/scripts/medium-zoom.js"></script>
   </article>
+  <nav class="not-prose mt-16 flex justify-between border-t border-main pt-8">
+    <div>
+      {
+        prev && (
+          <a href={`/course/${prev.id}`} class="text-main inline-flex items-center gap-1.5 transition hover:op-70">
+            <i class="i-ph-arrow-left" />
+            <span>Vorherige Lektion</span>
+          </a>
+        )
+      }
+    </div>
+    <div>
+      {
+        next && (
+          <a href={`/course/${next.id}`} class="text-main inline-flex items-center gap-1.5 transition hover:op-70">
+            <span>Nächste Lektion</span>
+            <i class="i-ph-arrow-right" />
+          </a>
+        )
+      }
+    </div>
+  </nav>
 </BaseLayout>
