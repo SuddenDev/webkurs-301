@@ -9,8 +9,10 @@ function initializeMediumZoom() {
   const isDark = document.documentElement.classList.contains('dark')
     || document.querySelector('html').dataset.theme === 'dark'
 
+  const images = [...document.querySelectorAll('.prose img')].filter(el => el.src !== 'https://codesandbox.io/static/img/play-codesandbox.svg')
+
   // Configure medium-zoom for all prose images (preserves Astro optimization)
-  const zoom = mediumZoom('.prose img', {
+  const zoom = mediumZoom(images, {
     margin: window.innerWidth > 1024 ? 100 : 16,
     background: isDark
       ? 'rgba(13, 17, 23, 0.9)' // Dark theme background (matching bg-hex-0d1117)
