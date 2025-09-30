@@ -1,6 +1,6 @@
 ---
 title: Webseitenaufbau & Portfolio-Konzeption
-description: Struktur verstehen, Konzept entwickeln
+description: Strukturierung von Portfolio-Websites – von klassischen Layouts über Informationsarchitektur bis zu User Experience Basics. Inklusive praktischer JavaScript-Einführung mit Lightbox-Implementierung und Wireframing-Übung.
 sides:
 date: 2025-09-29
 ---
