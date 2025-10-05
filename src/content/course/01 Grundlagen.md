@@ -3,6 +3,7 @@ title: Grundlagen und Einführung
 description: Einführung in die grundlegenden Konzepte der Webentwicklung – von Internet-Infrastruktur über Client-Server-Architektur bis zu den drei Säulen HTML, CSS und JavaScript. Inklusive praktischer Übung zur Erstellung einer ersten responsiven Portfolio-Seite.
 slides: https://www.figma.com/deck/4JQlEDCRQspZ8NqJ1uiadw
 date: 2025-09-26
+image: /src/assets/01-cover.jpg
 ---
 ## Agenda
 

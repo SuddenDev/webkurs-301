@@ -33,10 +33,10 @@ function getTarget(post: Course) {
         nothing here yet.
       </div>
     </template>
-    <li v-for="post in list" :key="post.data.title" mb-8>
+    <li v-for="post in list" :key="post.data.title" class="mb-12 pb-12 border-b border-main border-op-50! last:border-none">
       <a text-lg lh-tight nav-link flex="~ col gap-4" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)">
         <div v-if="post.data.image" class="w-full">
-          <img :src="post.data.image.src" :alt="post.data.image.alt || post.data.title" class="w-full h-48 object-cover rounded-lg">
+          <img :src="post.data.image.src" :alt=" `${post.data.title} Cover Bild` || ''" class="w-full object-cover rounded-lg">
         </div>
         <div flex="~ col gap-2">
           <div flex="~ col md:row gap-2 md:items-center">

@@ -1,8 +1,9 @@
 ---
-title: Webseitenaufbau & Portfolio-Konzeption
+title: Webseitenstruktur und User Experience
 description: Strukturierung von Portfolio-Websites – von klassischen Layouts über Informationsarchitektur bis zu User Experience Basics. Inklusive praktischer JavaScript-Einführung mit Lightbox-Implementierung und Wireframing-Übung.
-sides:
+slides: https://www.figma.com/deck/iVgULRkGid355hwIP3eFgk
 date: 2025-09-29
+image: /src/assets/02-cover.jpg
 ---
 ## Agenda
 

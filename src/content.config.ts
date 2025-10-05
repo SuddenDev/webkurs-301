@@ -17,16 +17,17 @@ const pages = defineCollection({
 
 const course = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/course' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string().optional(),
     slides: z.string().url().optional(),
-    image: z
-      .object({
-        src: z.string(),
-        alt: z.string(),
-      })
-      .optional(),
+    image: image().optional(),
+    // image: z
+    //   .object({
+    //     src: z.string(),
+    //     alt: z.string(),
+    //   })
+    //   .optional(),
     date: z
       .string()
       .or(z.date())
