@@ -11,8 +11,9 @@ image: /src/assets/02-cover.jpg
 - [Informationsarchitektur für Portfolios](#klassische-strukturen-für-portfolios)
 - [User Experience Basics](#user-experience-basics-was-will-ein-besucher)
 - [Content-Audit](#content-audit-was-brauche-ich)
+- [Wireframing](#wireframing)
 - [Praxis: JavaScript & Interaktivität](#praxis-javascript--interaktivität)
-- [Wireframes erstellen](#wireframing)
+- [Wireframes erstellen](#praxis-wireframe-auf-papier)
 - [Hausaufgabe](#hausaufgabe)
 
 ---
@@ -105,7 +106,6 @@ Ein Besucher entscheidet in den ersten 3 Sekunden, ob er bleibt. Diese Regel ist
 **Bilder:**
 - Welche 10-15 besten Arbeiten?
 - Passen sie stilistisch zusammen?
-- Verschiedene Formate verfügbar?
 
 **Texte:**
 - Kurze Selbstbeschreibung (2-3 Sätze)
@@ -122,8 +122,9 @@ Ein Besucher entscheidet in den ersten 3 Sekunden, ob er bleibt. Diese Regel ist
 ---
 ## Wireframing
 
-**Was sind Wireframes?** Einfache Skizzen, die zeigen:
+**Was sind Wireframes?** 
 
+Einfache Skizzen, die zeigen:
 - Wo kommen welche Elemente hin?
 - Wie groß sind die Bereiche?
 - Wie ist die Hierarchie?
@@ -272,7 +273,7 @@ Skizzieren Sie 2-3 Layout-Ideen für Ihre Portfolio-Startseite.
 ## Hausaufgabe
 
 **Content sammeln**
-- Gedanken machen, welche Arbeiten Sie gerne Zeigen würden. 
+- Gedanken machen, welche Arbeiten Sie gerne zeigen würden. 
 - Kurze Selbstbeschreibung schreiben (2-3 Sätze)
 - Kontaktinformationen zusammenstellen
 - Alles am besten als Notiz oder Worddokument.
