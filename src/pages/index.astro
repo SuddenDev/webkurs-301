@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
+
+return Astro.redirect('/course')
 ---
 
 <BaseLayout description={siteConfig.description}>
-  <article class="prose">
+  <!-- <article class="prose">
     <h1 class="text-title">Vitesse theme</h1>
     <p>Vitesse theme for Astro, supports Vue and UnoCSS.</p>
     <p>
@@ -76,5 +78,5 @@ import siteConfig from '@/site-config'
         {siteConfig.email}
       </a>.
     </p>
-  </article>
+  </article> -->
 </BaseLayout>

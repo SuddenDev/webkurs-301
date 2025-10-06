@@ -1,0 +1,158 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+
+const designLinks = [
+  {
+    name: 'Figma',
+    description: 'Design Tool für Screendesign und Wireframing',
+    url: 'https://figma.com',
+    logo: '/Figma-logo.svg',
+  },
+]
+const inspirationLinks = [
+  {
+    name: 'awwwards',
+    url: 'https://www.awwwards.com/',
+    logo: '/awwwards.png',
+  },
+  {
+    name: 'Minimal Gallery',
+    url: 'https://minimal.gallery/',
+    logo: '/minimal-gallery.png',
+  },
+  {
+    name: 'Godly',
+    url: 'https://godly.website/',
+    logo: '/godly.png',
+  },
+  {
+    name: 'httpster',
+    url: 'https://httpster.net/',
+    logo: '/httpster.png',
+  },
+  {
+    name: 'mobbin',
+    url: 'https://mobbin.com/',
+    logo: '/mobbin.png',
+  },
+]
+const devLinks = [
+  {
+    name: 'CodeSandbox',
+    description: 'Online Code Editor / IDE',
+    url: 'https://codesandbox.io/',
+    logo: '/CodeSandbox_Full_Logo.jpg',
+  },
+  {
+    name: 'Visual Studio Code',
+    description: 'Code Editor / IDE',
+    url: 'https://code.visualstudio.com/',
+    logo: '/Visual_Studio_Code_1.35_icon.svg.png',
+  },
+]
+
+const noCodeLinks = [
+  {
+    name: 'Framer',
+    description: 'Design Tool / No-Code Website Builder',
+    url: 'https://www.framer.com/',
+    logo: '/Framer_Logo_Core.jpg',
+  },
+  {
+    name: 'Webflow',
+    description: 'No-Code Website Builder',
+    url: 'https://webflow.com',
+    logo: '/webflow_Full_Logo_Blue_Black.jpg',
+  },
+]
+---
+
+<BaseLayout title="Links" description="Alle wichtigen Links">
+  <article>
+    <div class="mb-12 border-b border-main !border-op-50">
+      <h1 class="text-4xl font-semibold mb-4">Links</h1>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Design Tools</h2>
+      <ul class="grid md:cols-2 gap-x-6 gap-y-9">
+        {
+          designLinks.map((data) => (
+            <li>
+              <a href={data.url} target="_blank" class="hover:op-80 transition">
+                <div class="dark:bg-slate-900 bg-white !bg-opacity-80 rounded-xl mb-2 h-40 p-6">
+                  <img class="w-full h-full object-contain" src={data.logo} alt={`${data.name} Logo`} />
+                </div>
+                <p>
+                  <div class="mb-1">{data.name}</div>
+                  <div class="text-sm opacity-70">{data.description}</div>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <hr class="border-main !border-op-50 mt-16 mb-8" />
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Inspiration / Directories</h2>
+      <ul class="grid md:cols-2 gap-x-6 gap-y-9">
+        {
+          inspirationLinks.map((data) => (
+            <li>
+              <a href={data.url} target="_blank" class="hover:op-80 transition">
+                <div class="dark:bg-slate-900 bg-white !bg-opacity-80 rounded-xl mb-2 h-40 p-2">
+                  <img class="w-full h-full object-contain" src={data.logo} alt={`${data.name} Logo`} />
+                </div>
+                <p>
+                  <div>{data.name}</div>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <hr class="border-main !border-op-50 mt-16 mb-8" />
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Code Tools</h2>
+      <ul class="grid md:cols-2 gap-x-6 gap-y-9">
+        {
+          devLinks.map((data) => (
+            <li>
+              <a href={data.url} target="_blank" class="hover:op-80 transition">
+                <div class="dark:bg-slate-900 bg-white !bg-opacity-80 rounded-xl mb-2 h-40 p-6">
+                  <img class="w-full h-full object-contain" src={data.logo} alt={`${data.name} Logo`} />
+                </div>
+                <p>
+                  <div class="mb-1">{data.name}</div>
+                  <div class="text-sm opacity-70">{data.description}</div>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <hr class="border-main !border-op-50 mt-16 mb-8" />
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">No-Code Tools</h2>
+      <ul class="grid md:cols-2 gap-x-6 gap-y-9">
+        {
+          noCodeLinks.map((data) => (
+            <li>
+              <a href={data.url} target="_blank" class="hover:op-80 transition">
+                <div class="dark:bg-slate-900 bg-white !bg-opacity-80 rounded-xl mb-2 h-40 p-6">
+                  <img class="w-full h-full object-contain" src={data.logo} alt={`${data.name} Logo`} />
+                </div>
+                <p>
+                  <div class="mb-1">{data.name}</div>
+                  <div class="text-sm opacity-70">{data.description}</div>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </article>
+</BaseLayout>
