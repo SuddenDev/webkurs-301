@@ -1,7 +1,7 @@
 {
   "name": "kurs-digitalkompetenz-301",
   "type": "module",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A minimal, SEO-friendly portfolio and blog theme for Astro, supports Vue and UnoCSS.",
   "author": "Dominik Tampe <hello@dtampe.com> (https://dtampe.com/)",
   "license": "MIT",
