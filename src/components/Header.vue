@@ -22,7 +22,7 @@ onMounted(() => {
     event.preventDefault()
   })
 
-  const headerEl = document.querySelector('#header') as HTMLElement
+  const headerEl = document.querySelector('#site-header') as HTMLElement
   if (!headerEl)
     return
 
@@ -50,7 +50,7 @@ onMounted(() => {
 
 <template>
   <header
-    id="header" :class="{ 'header-bg-blur': scroll > 20 }" view-transition-name="site-header"
+    id="site-header" :class="{ 'header-bg-blur': scroll > 20 }" view-transition-name="site-header"
     class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex items-center relative gap-4 md:gap-6"
   >
     <!-- Site name on the left -->

@@ -1,0 +1,98 @@
+---
+import type { MarkdownHeading } from 'astro'
+
+interface Props {
+  headings: MarkdownHeading[]
+}
+
+interface TreeNode {
+  heading: MarkdownHeading
+  children: TreeNode[]
+}
+
+const { headings } = Astro.props
+
+const filteredHeadings = headings.filter((heading) => heading.depth <= 3)
+
+// Build nested tree structure
+function buildTree(headings: MarkdownHeading[]): TreeNode[] {
+  const tree: TreeNode[] = []
+  const stack: TreeNode[] = []
+
+  for (const heading of headings) {
+    const node: TreeNode = { heading, children: [] }
+
+    // Find parent by popping stack until we find a heading with lower depth
+    while (stack.length > 0 && stack[stack.length - 1].heading.depth >= heading.depth) {
+      stack.pop()
+    }
+
+    // Add to parent's children or root
+    if (stack.length === 0) {
+      tree.push(node)
+    } else {
+      stack[stack.length - 1].children.push(node)
+    }
+
+    stack.push(node)
+  }
+
+  return tree
+}
+
+const treeHeadings = buildTree(filteredHeadings)
+---
+
+<nav class="toc">
+  <h2>Agenda</h2>
+  <ul class="toc-list">
+    {
+      treeHeadings.map((node) => (
+        <li>
+          <a href={`#${node.heading.slug}`}>{node.heading.text}</a>
+          {node.children.length > 0 && (
+            <ul class="toc-list-nested">
+              {node.children.map((child) => (
+                <li>
+                  <a href={`#${child.heading.slug}`}>{child.heading.text}</a>
+                  {child.children.length > 0 && (
+                    <ul class="toc-list-nested">
+                      {child.children.map((grandchild) => (
+                        <li>
+                          <a href={`#${grandchild.heading.slug}`}>{grandchild.heading.text}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .toc-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .toc-list-nested {
+    list-style: none;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .toc a {
+    text-decoration: none;
+    color: var(--text-link);
+    transition: color 0.2s;
+  }
+
+  .toc a:hover {
+    color: var(--text-main);
+  }
+</style>

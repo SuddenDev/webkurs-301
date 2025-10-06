@@ -5,7 +5,7 @@ slides: https://www.figma.com/deck/4JQlEDCRQspZ8NqJ1uiadw
 date: 2025-09-26
 image: /src/assets/01-cover.jpg
 ---
-## Agenda
+<!-- ## Agenda
 
 1. Kursüberblick
 	- [Ziel des Kurses](#ziel-des-kurses)
@@ -21,9 +21,9 @@ image: /src/assets/01-cover.jpg
 	- [HTML Grundstruktur](#html-grundstruktur)
 	- [CSS Styling](#css-styling-hinzufügen)
 	- [Responsive Verhalten](#responsive-verhalten-hinzufügen)
-4. [Hausaufgabe](#hausaufgabe)
+4. [Hausaufgabe](#hausaufgabe) 
 
----
+--- -->
 
 ## Ziel des Kurses
 

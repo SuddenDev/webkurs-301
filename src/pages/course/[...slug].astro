@@ -4,14 +4,25 @@ import type { Course } from '@/types'
 import { getCourses } from '@/utils/posts'
 import { render } from 'astro:content'
 import { Image } from 'astro:assets'
+import type { MarkdownHeading } from 'astro'
+import TableOfContents from '@/components/TableOfContents.astro'
 
 export async function getStaticPaths() {
   const posts = await getCourses()
+
+  const headings = await Promise.all(
+    posts.map(async (post) => {
+      const data = await render(post)
+      return data.headings
+    }),
+  )
+
   return posts.map((post, index) => {
     return {
       params: { slug: post.id },
       props: {
         post,
+        headings: headings[index],
         prev: index > 0 ? posts[index - 1] : null,
         next: index < posts.length - 1 ? posts[index + 1] : null,
       },
@@ -19,9 +30,9 @@ export async function getStaticPaths() {
   })
 }
 
-type Props = { post: Course; prev: Course | null; next: Course | null }
+type Props = { post: Course; prev: Course | null; next: Course | null; headings: MarkdownHeading[] }
 
-const { post, prev, next } = Astro.props
+const { post, prev, next, headings } = Astro.props
 const { title, image, description, date, slides } = post.data
 
 const { Content } = await render(post)
@@ -54,6 +65,8 @@ function getDate(date: string) {
         </p>
       )
     }
+    <hr />
+    <TableOfContents headings={headings} />
     <hr />
     <Content />
     <script src="@/scripts/medium-zoom.js"></script>

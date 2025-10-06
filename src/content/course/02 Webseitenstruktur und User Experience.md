@@ -5,7 +5,7 @@ slides: https://www.figma.com/deck/iVgULRkGid355hwIP3eFgk
 date: 2025-09-29
 image: /src/assets/02-cover.jpg
 ---
-## Agenda
+<!-- ## Agenda
 
 - [Webseitenarchitektur](#klassische-webseitenarchitektur)
 - [Informationsarchitektur für Portfolios](#klassische-strukturen-für-portfolios)
@@ -16,7 +16,7 @@ image: /src/assets/02-cover.jpg
 - [Wireframes erstellen](#praxis-wireframe-auf-papier)
 - [Hausaufgabe](#hausaufgabe)
 
----
+---  -->
 
 ## Klassische Webseitenarchitektur
 
