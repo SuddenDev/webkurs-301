@@ -37,11 +37,11 @@ image: /src/assets/01-cover.jpg
 
 ## Zeitplan, Termine, Abgaben
 
-**27.11.25  Zwischenabgabe**
- Ein ausgearbeitetes Portfolio Design in Figma für Desktop und Mobile. Tablet-Ansicht ist ist optional. Die Webseite sollte aus mindestens zwei einzelnen Seiten bestehen und Arbeiten gut darstellen. Ein Figma Link per e-Mail ist ausreichend.
+**27.11.25  Zwischenabgabe & Präsentation**
+ Ein ausgearbeitetes Portfolio Design in Figma für Desktop und Mobile. Tablet-Ansicht ist ist optional. Die Webseite sollte aus mindestens zwei einzelnen Seiten bestehen und Arbeiten gut darstellen. Ein Figma Link per e-Mail ist ausreichend als Abgabe, es muss aber in der Unterrichtsstunde präsentiert werden (max. 2-3 min).
 
-**30.01.26  Abgabe**
-Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten professionell präsentiert. Die Umsetzung soll dem UI-Design entsprechen, responsive funktionieren und technisch sauber implementiert sein. Ein Link ist ausreichend, kann aber auch als .zip angeliefert werden.
+**22.01.26  Abgabe & Abschlusspräsentation**
+Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten professionell präsentiert. Die Umsetzung soll dem UI-Design entsprechen, responsive funktionieren und technisch sauber implementiert sein. Ein Link ist ausreichend, kann aber auch als .zip angeliefert werden. Für die Präsentation müssen Sie ihre Webseite in 3-5min. präsentieren.
 
 **Bewertungskriterien**
 - 25% Design: Visuelle Umsetzung, Konsistenz
