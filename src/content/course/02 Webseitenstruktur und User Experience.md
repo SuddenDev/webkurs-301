@@ -1,23 +1,10 @@
 ---
-title: Webseitenstruktur und User Experience
+title: 02 Webseitenstruktur und User Experience
 description: Strukturierung von Portfolio-Websites – von klassischen Layouts über Informationsarchitektur bis zu User Experience Basics. Inklusive praktischer JavaScript-Einführung mit Lightbox-Implementierung und Wireframing-Übung.
 slides: https://www.figma.com/deck/iVgULRkGid355hwIP3eFgk
 date: 2025-09-29
 image: /src/assets/02-cover.jpg
 ---
-<!-- ## Agenda
-
-- [Webseitenarchitektur](#klassische-webseitenarchitektur)
-- [Informationsarchitektur für Portfolios](#klassische-strukturen-für-portfolios)
-- [User Experience Basics](#user-experience-basics-was-will-ein-besucher)
-- [Content-Audit](#content-audit-was-brauche-ich)
-- [Wireframing](#wireframing)
-- [Praxis: JavaScript & Interaktivität](#praxis-javascript--interaktivität)
-- [Wireframes erstellen](#praxis-wireframe-auf-papier)
-- [Hausaufgabe](#hausaufgabe)
-
----  -->
-
 ## Klassische Webseitenarchitektur
 
 ### Header
@@ -141,7 +128,61 @@ Einfache Skizzen, die zeigen:
 
 ---
 
-## Praxis: JavaScript & Interaktivität
+## Praxis
+
+### Responsive Verhalten hinzufügen
+
+Damit unsere Website auch auf allen Geräten gleich gut aussieht, müssen wir nun noch so genannte Media-Queries hinzufügen. Das ist in dem CodeSandbox Link bereits gemacht worden.
+
+[![Edit 02_01: Praxis Start](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/k89xxr)
+
+```css
+/* style.css */
+
+/* Tablet-Ansicht: 2 Spalten statt 3 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Kleinere Überschrift */
+  }
+
+  header {
+    padding: 40px 15px; /* Weniger Padding */
+  }
+
+  .portfolio {
+    padding: 40px 15px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten auf Tablet */
+    gap: 15px; /* Kleinerer Abstand */
+  }
+}
+
+/* Mobile-Ansicht: 1 Spalte */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Nur 1 Spalte auf Mobile */
+    gap: 15px;
+  }
+
+  .gallery-item img {
+    height: 200px; /* Kleinere Bildhöhe auf Mobile */
+  }
+}
+
+/* Sehr große Bildschirme: Noch größere Überschrift */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+```
+
+**Test:** Browserfenster kleiner/größer ziehen
+
+--- 
+### Interaktivität hinzufügen: Lightbox
 
 **Was ist eine Lightbox?**
 - Bild wird beim Klick groß angezeigt
@@ -152,9 +193,6 @@ Einfache Skizzen, die zeigen:
 - Wie JavaScript mit HTML interagiert
 - Event Listener für Klicks
 - CSS-Klassen dynamisch hinzufügen/entfernen
-
---- 
-### Interaktivität hinzufügen
 
 [![Edit 02_01: Praxis Start](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/k89xxr)
 
@@ -261,7 +299,8 @@ lightbox.addEventListener('click', () => {
 Unser finale Code sollte dann so aussehen:
 [![Edit 01_02: Praxis Ende](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/01-02-praxis-g468h5)
 
-## Praxis: Wireframe auf Papier
+---
+### Wireframe auf Papier
 
 Skizzieren Sie 2-3 Layout-Ideen für Ihre Portfolio-Startseite.
 

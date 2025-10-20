@@ -1,30 +1,10 @@
 ---
-title: Grundlagen und Einführung
+title: 01 Grundlagen und Einführung
 description: Einführung in die grundlegenden Konzepte der Webentwicklung – von Internet-Infrastruktur über Client-Server-Architektur bis zu den drei Säulen HTML, CSS und JavaScript. Inklusive praktischer Übung zur Erstellung einer ersten responsiven Portfolio-Seite.
 slides: https://www.figma.com/deck/4JQlEDCRQspZ8NqJ1uiadw
 date: 2025-09-26
 image: /src/assets/01-cover.jpg
 ---
-<!-- ## Agenda
-
-1. Kursüberblick
-	- [Ziel des Kurses](#ziel-des-kurses)
-	- [Zeitplan, Termine, Abgaben](#zeitplan-termine-abgaben)
-2. Grundlagen
-	- [Das Internet: Ein globales Netzwerk](#das-internet-ein-globales-netzwerk)
-	- [Client-Server Architektur](#client-server-architektur)
-	- [Domain, Hosting, Browser, DNS](#domain-hosting-browser-dns)
-	- [Die drei Säulen des Web](#die-drei-säulen-des-web)
-	- [HTML Beispiel](#html-beispiel)
-	- [Inspirationsquellen](#inspirationsquellen-für-webdesign)
-3. [Praxis: Unsere erste HTML/CSS Seite](#praxis-unsere-erste-htmlcss-seite)
-	- [HTML Grundstruktur](#html-grundstruktur)
-	- [CSS Styling](#css-styling-hinzufügen)
-	- [Responsive Verhalten](#responsive-verhalten-hinzufügen)
-4. [Hausaufgabe](#hausaufgabe) 
-
---- -->
-
 ## Ziel des Kurses
 
 - Grundlagen der Webentwicklung verstehen und anwenden
@@ -408,58 +388,6 @@ h1 {
 ![HTML + CSS Praxis](../../assets/01-praxis_html_css.png)
 
 ---
-
-## Responsive Verhalten hinzufügen
-
-Damit unsere Website auch auf allen Geräten gleich gut aussieht, müssen wir nun noch so genannte Media-Queries hinzufügen.
-
-```css
-/* style.css */
-
-/* Tablet-Ansicht: 2 Spalten statt 3 */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem; /* Kleinere Überschrift */
-  }
-
-  header {
-    padding: 40px 15px; /* Weniger Padding */
-  }
-
-  .portfolio {
-    padding: 40px 15px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 Spalten auf Tablet */
-    gap: 15px; /* Kleinerer Abstand */
-  }
-}
-
-/* Mobile-Ansicht: 1 Spalte */
-@media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: 1fr; /* Nur 1 Spalte auf Mobile */
-    gap: 15px;
-  }
-
-  .gallery-item img {
-    height: 200px; /* Kleinere Bildhöhe auf Mobile */
-  }
-}
-
-/* Sehr große Bildschirme: Noch größere Überschrift */
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 4rem;
-  }
-}
-```
-
-**Test:** Browserfenster kleiner/größer ziehen
-
----
-
 ## Hausaufgabe
 
 **Aufgabe:** Finden Sie 3 inspirierende Portfolio-Websites

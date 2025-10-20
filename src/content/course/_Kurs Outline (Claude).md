@@ -41,7 +41,6 @@
     - Frames vs. Gruppen
     - Auto Layout Basics
     - Komponenten erstellen
-    - Responsive Design in Figma (Constraints)
 - **Praktisch:** Einfache Landing-Page nachbauen
 - **Hausaufgabe:** Portfolio-Design in Figma beginnen (Desktop-Version)
 
@@ -53,7 +52,6 @@
 
 - **Themen:**
     - Typographie für Web (Web Safe Fonts, Hierarchien)
-    - Farben für Bildschirme vs. Print
     - Grid-Systeme für Layouts
     - Bildpräsentation: Galerien, Lightboxes, Slideshows
 - **Praktisch:** Desktop-Design ausarbeiten
