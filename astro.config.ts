@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     port: 1977,
   },
+  redirects: {
+    '/': '/course', // or any other path
+  },
   integrations: [
     mdx(),
     sitemap(),
