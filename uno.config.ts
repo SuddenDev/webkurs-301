@@ -49,5 +49,6 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [
     'i-ph-globe',
+    'i-ph-arrow-square-out',
   ],
 })
