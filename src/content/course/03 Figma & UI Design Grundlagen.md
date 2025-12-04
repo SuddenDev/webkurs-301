@@ -34,7 +34,7 @@ image: /src/assets/03-cover.jpg
 
 ![Figma Help Page](../../assets/03-figma-docs.png)
 
-Figma ist zu komplex für rein frontale Vermittlung, daher empfehle ich folgende Resourcen um Figma zu "wirklich" zu lernen.
+Figma ist zu komplex für rein frontale Vermittlung, daher empfehle ich folgende Ressourcen um Figma zu "wirklich" zu lernen.
 
 - [figma.com/resources/learn-design](https://www.figma.com/resources/learn-design/)
 - [help.figma.com](https://help.figma.com/hc/en-us/categories/360002051613)
