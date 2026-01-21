@@ -3,6 +3,7 @@ import { useWindowScroll } from '@vueuse/core'
 import { computed, onMounted, ref, unref } from 'vue'
 import siteConfig from '@/site-config'
 import { getLinkTarget } from '@/utils/link'
+import Announcement from './Announcement.vue'
 import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = siteConfig.header.navLinks || []
@@ -48,23 +49,20 @@ onMounted(() => {
 })
 </script>
 
-<!-- announcement -->
-<!-- <div class="announcement w-full text-center bg-indigo-500  dark:bg-indigo-600">
-  <a
-    class="inline-flex gap-2 items-center transition-color py-1.5 px-4 text-sm text-indigo-50!  hover:(underline dark:text-white)"
-    href="https://forms.gle/8wJ1mc4Z7oV3e7pbA" target="_blank"
-  >
-    Hier Zwischenabgabe WiSe 2025/26 einreichen
-    <div class="size-5 i-ph-arrow-square-out" />
-  </a>
-</div> -->
-
 <template>
   <header
     id="site-header" :class="{ 'header-bg-blur': scroll > 20 }" view-transition-name="site-header"
     class="!fixed bg-transparent z-899 w-screen "
   >
-    <!-- main header -->
+    <!-- announcement -->
+    <Announcement
+      href="https://forms.gle/JNeUGmtXGHkwuw517"
+      type="rainbow"
+      expires-at="2026-01-29 23:59"
+    >
+      Hier Abgabe WiSe 2025/26 einreichen
+    </Announcement>
+
     <div class="px-6 h-20 flex items-center relative gap-4 md:gap-6">
       <!-- Site name on the left -->
       <div class="flex items-center">
