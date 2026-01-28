@@ -1,63 +1,118 @@
-# Kurs Digitalkompetenz
+# Kurs Digitalkompetenz für Fotografen
 
-A minimal, SEO-friendly portfolio and blog theme for Astro, supports Vue and UnoCSS.
+A modern educational website for a digital competency course for photographers, taught at Hochschule München. Built with Astro, Vue, and UnoCSS for optimal performance and maintainability.
 
-## Preview
+**Live Site:** [kurs.dtampe.com](https://kurs.dtampe.com)
 
-![Preview Image](./public/preview.jpg)
+## Project Structure
 
-## Features
+```
+webkurs-301/
+├── src/
+│   ├── components/        # Vue components (Header, Footer, ThemeToggle, etc.)
+│   ├── content/
+│   │   ├── course/        # Course lessons (markdown/MDX files)
+│   │   └── pages/         # Static pages
+│   ├── layouts/           # Astro layout components
+│   ├── pages/             # Astro pages and routing
+│   └── site-config.ts     # Site metadata and navigation
+├── astro.config.ts        # Astro configuration
+└── uno.config.ts          # UnoCSS styling configuration
+```
 
-- 100 / 100 Lighthouse performance.
-- Responsive.
-- SEO-friendly.
-- Light / Dark Theme.
-- Markdown support.
-- <a target="_blank" href="https://mdxjs.com/">MDX</a> (components in your markdown) support.
-- <a target="_blank" href="https://vuejs.org/">Vue</a> SFC component support.
-- Auto generated sitemap and RSS Feed <a target="_blank" href="https://vueuse.org/">VueUse</a> & <a target="_blank" href="https://lodash.com/">Lodash</a> support.
-- Use the <a target="_blank" href="https://unocss.dev/">UnoCSS</a> for style, it's fast.
+## Adding New Lessons
 
-## Lighthouse Performance
+Create a new `.md` or `.mdx` file in `src/content/course/`:
 
-![Lighthouse Performance Image](./public/lighthouse.jpg)
+```yaml
+---
+title: Your Lesson Title
+description: Brief description of the lesson
+date: 2024-01-28
+draft: false              # Set to true to hide from production
+lang: de-DE
+---
 
-## Quick Start
+Your lesson content here...
+```
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kieranwv/astro-theme-vitesse)
+**Note:** Files starting with `_` are ignored by the content loader and won't appear on the site.
 
-Click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+## Styling System
 
-If you  just want to develop locally, you can [create a repo](https://github.com/kieranwv/astro-theme-vitesse/generate) from this template on GitHub.
+The site uses UnoCSS with custom design tokens defined in `uno.config.ts`:
 
-## Usage
+- **Colors:** `bg-main`, `text-main`, `text-link`, `border-main`
+- **Components:** `nav-link`, `prose-link`, `container-link`
+- **Typography:** Inter font family with custom weights
+- **Icons:** Phosphor icons available via `i-ph-*` classes
 
-First, install the dependencies.
+## Technology Stack
+
+- **Framework:** Astro 5.x with Vue 3.x integration
+- **Styling:** UnoCSS
+- **Content:** MDX support
+- **Package Manager:** pnpm
+
+## Development
+
+### Prerequisites
+
+- Node.js >= 22
+- pnpm
+
+### Setup
+
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Just run and visit http://localhost:1977.
+### Available Commands
 
 ```bash
+# Start development server on http://localhost:1977
 pnpm run dev
-```
 
-> Node.js version 20 or higher is required for this project.
-
-To build the App, you can run:
-
-```bash
+# Build for production
 pnpm run build
-```
 
-You will then see the `dist` folder generated for publishing, which you can preview locally with the following command.
-
-```bash
+# Preview production build locally
 pnpm run preview
+
+# Run linting
+pnpm run lint
+
+# Auto-fix linting issues
+pnpm run lint:fix
+
+# Bump version
+pnpm run release
 ```
+
+## Content Structure
+
+Course content is organized in `src/content/course/` with the following frontmatter schema:
+
+```yaml
+---
+title: Lesson Title        # Required
+description: Brief summary # Optional
+date: 2024-01-01          # Required
+draft: false              # Optional, defaults to false
+lang: de-DE               # Optional, defaults to 'de-DE'
+---
+```
+
+Files starting with `_` are ignored by the content loader.
+
+## Configuration
+
+- **Site Config:** `src/site-config.ts` - Metadata, navigation, and social links
+- **Astro Config:** `astro.config.ts` - Framework and integration settings
+- **UnoCSS Config:** `uno.config.ts` - Design tokens and styling shortcuts
 
 ## License
 
-[MIT License](./LICENSE) © 2024 [Kieran Wang](https://github.com/kieranwv/)
+MIT License
