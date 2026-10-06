@@ -1,8 +1,8 @@
 ---
 title: 05 Domain, SEO und mehr
-description: "In diesem Modul geht es um die Grundlagen der eigenen Webpräsenz: Domain-Kauf, Hosting-Verknüpfung, E-Mail-Einrichtung, SEO-Basics und Einstieg ins Coding."
-date: 2026-01-28
-slides: https://www.figma.com/deck/bdxTB8I8aAwQB5FUlhqZJP/05-Bonus--Domains--Email--SEO--Dev
+description: "Die Grundlagen der eigenen Webpräsenz: Domain-Kauf, Hosting-Verknüpfung, E-Mail-Einrichtung und SEO-Basics."
+date: 2026-10-06
+slides: https://www.figma.com/deck/bdxTB8I8aAwQB5FUlhqZJP
 image: /src/assets/05-cover.jpg
 ---
 ## Domain kaufen / mieten
@@ -130,7 +130,7 @@ Messung von Besucherdaten: Woher kommen Besucher? Wie lange bleiben sie? Welche 
 
 ## Roadmap: Webentwicklung
 
-![Roadmap.sh](../../assets/05-dev-roadmap.png)
+![Roadmap.sh](../../assets/03-dev-roadmap.png)
 [Bildquelle](https://roadmap.sh/frontend)
 
 ### Empfohlener Lernpfad

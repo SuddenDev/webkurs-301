@@ -1,8 +1,8 @@
 ---
-title: 01 Grundlagen und Einführung
-description: Einführung in die grundlegenden Konzepte der Webentwicklung – von Internet-Infrastruktur über Client-Server-Architektur bis zu den drei Säulen HTML, CSS und JavaScript. Inklusive praktischer Übung zur Erstellung einer ersten responsiven Portfolio-Seite.
+title: 01 Grundlagen, Webseitenstruktur und User Experience
+description: Einführung in die grundlegenden Konzepte der Webentwicklung – von Internet-Infrastruktur über Client-Server-Architektur bis HTML & co. Dazu die Strukturierung von Portfolio-Websites, User Experience Basics und eine Wireframing-Übung auf Papier.
 slides: https://www.figma.com/deck/4JQlEDCRQspZ8NqJ1uiadw
-date: 2025-09-26
+date: 2026-10-06
 image: /src/assets/01-cover.jpg
 ---
 ## Ziel des Kurses
@@ -17,11 +17,11 @@ image: /src/assets/01-cover.jpg
 
 ## Zeitplan, Termine, Abgaben
 
-**27.11.25  Zwischenabgabe & Präsentation**
+**26.11.26  Zwischenabgabe & Präsentation**
  Ein ausgearbeitetes Portfolio Design in Figma für Desktop und Mobile. Tablet-Ansicht ist ist optional. Die Webseite sollte aus mindestens zwei einzelnen Seiten bestehen und Arbeiten gut darstellen. Ein Figma Link per e-Mail ist ausreichend als Abgabe, es muss aber in der Unterrichtsstunde präsentiert werden (max. 2-3 min).
 
-**22.01.26  Abgabe & Abschlusspräsentation**
-Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten professionell präsentiert. Die Umsetzung soll dem UI-Design entsprechen, responsive funktionieren und technisch sauber implementiert sein. Ein Link ist ausreichend, kann aber auch als .zip angeliefert werden. Für die Präsentation müssen Sie ihre Webseite in 3-5min. präsentieren.
+**21.01.27  Abgabe & Abschlusspräsentation**
+Eine persönliche Portfolio-Website, die deine fotografischen Arbeiten professionell präsentiert. Die Umsetzung soll dem UI-Design entsprechen, responsive funktionieren und technisch sauber implementiert sein. Ein Link ist ausreichend, kann aber auch als .zip angeliefert werden. Für die Präsentation musst du deine Webseite in 3-5min. präsentieren.
 
 **Bewertungskriterien**
 - 25% Design: Visuelle Umsetzung, Konsistenz
@@ -53,8 +53,8 @@ Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten profession
 
 **Client = Der Fragesteller**
 
-- Ihr Browser (Chrome, Safari, Firefox)
-- Ihre Mobile App
+- Dein Browser (Chrome, Safari, Firefox)
+- Deine Mobile App
 - Stellt Anfragen
 
 **Server = Der Antworter**
@@ -66,15 +66,16 @@ Eine persönliche Portfolio-Website, die Ihre fotografischen Arbeiten profession
 ![Diagram Internet](./../../assets/01-internet_diagram.png)
 
 ---
+
 ## Domain, Hosting, Browser, DNS
 
 ### Domain
-- Ihre Webadresse: www.max-fotografie.de
+- Deine Webadresse: www.max-fotografie.de
 - Muss gekauft/gemietet werden
 - Verschiedene Endungen: .de, .com, .photography
 
 ### Hosting
-- Speicherplatz für Ihre Website-Dateien
+- Speicherplatz für deine Website-Dateien
 - Server, der 24/7 läuft
 - Verschiedene Anbieter und Preise
 
@@ -126,63 +127,71 @@ Schritt für Schritt: www.instagram.com
 - Buttons, Formulare, dynamische Inhalte
 - Wie die Elektronik eines Hauses
 
----
-
-## HTML Beispiel
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mein Portfolio</title>
-</head>
-<body>
-    <h1>Max Mustermann</h1>
-    <p>Fotograf aus München</p>
-    <img src="portrait.jpg" alt="Portrait">
-</body>
-</html>
-```
-
-**Das sieht der Browser:**
-
-- Große Überschrift: "Max Mustermann"
-- Text darunter: "Fotograf aus München"
-- Ein Bild namens "portrait.jpg"
-
-![Vorschau HTML Beispiel](../../assets/01-webseite_html_only.png)
-
-[![Edit Kurs / 01 Einführung: Vereinfachtes Code Beispiel](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/vs8s3z)
+Wie dieser Code konkret aussieht und wie man damit eine Seite baut, sehen wir in Einheit 03.
 
 ---
 
-## CSS Beispiel
+## Klassische Webseite Informationsarchitektur
 
-```css
-h1 {
-  color: #333;
-  font-size: 48px;
-  font-family: 'Helvetica', sans-serif;
-}
+### Header
+- Logo oder Name
+- Hauptnavigation
+- Call-to-Action
 
-p {
-  color: #666;
-  font-size: 18px;
-  line-height: 1.5;
-}
+### Navigation
+- Menüstruktur
+- Orientierung für Besucher
+- Oft auch im Header
 
-img {
-  width: 300px;
-  border-radius: 10px;
-}
+### Content (Hauptinhalt)
+- Texte, Bilder, Projekte
+- Der wichtigste Bereich
+
+### Footer
+- Kontaktinformationen
+- Impressum, Datenschutz
+
+![HTML + CSS Praxis](../../assets/01-html_bereiche_tutorials_point.png)
+[Bild Quelle](https://www.tutorialspoint.com/css/css_layouts.htm)
+
+---
+### Alternative Layout Beispiele
+
+![trstudio.co.uk](../../assets/01-screenshot_alternative_layouts_1.png)
+[trstudio.co.uk](https://trstudio.co.uk)
+
+![mclaneteitel.com](../../assets/01-screenshot_alternative_layouts_2.png)
+[mclaneteitel.com](https://www.mclaneteitel.com/)
+
+---
+
+## Klassische Strukturen für Portfolios
+
+### One-Page Portfolio
+
+```
+- Hero mit Namen
+- Portfolio-Galerie
+- Über mich
+- Kontakt (einfach eine e-mail Adresse)
 ```
 
-**Jetzt wird aus der langweiligen HTML-Seite:**
-- Schöne Schrift und Farben
-- Größere, lesbare Texte
-- Abgerundete Bildecken
+### Multi-Page Portfolio
 
-![Vorschau HTML + CSS Beispiel](../../assets/01-webseite_mit_css.png)
+```
+- Home
+- Portfolio (mit Projekten)
+	- Einzelseite je Projekte
+- Über mich
+- Kontakt (ggf. als Formular, e-mail ist aber immer okay.)
+```
+
+**Grundprinzipien:**
+- Klarheit: Besucher wissen immer, wo sie sind
+- Hierarchie: Wichtiges zuerst
+- Auffindbarkeit: Inhalte sind leicht zu finden
+
+![sitemaps](../../assets/01-sitemaps.jpg)
 
 ---
 
@@ -204,205 +213,78 @@ img {
 
 ---
 
-## Inspirationsquellen für Webdesign
+## Frage: Was will ein Besucher?
 
-Gute Inspirationen im Bereich Webdesign sind nicht immer leicht zu finden, aber es gibt einige Websites, die ich auf jeden Fall empfehlen kann. Diese legen großen Wert auf hochwertiges Webdesign und präsentieren Beispiele aus der Praxis – nicht nur UI-Designs, die auf Screenshots vielleicht toll aussehen, aber in der Praxis nicht wirklich funktionieren. Viele Designs von Dribbble und Behance scheitern, weil sie aus UX-Sicht nicht funktionieren.
+**Ein typischer Besucher möchte...**
+1. Deine Arbeiten sehen
+2. Den Stil verstehen
+3. Ein paar Informationen über dich
+4. Einen Kontakt finden (E-Mail, Social Media, Telefon, Formular)
 
-- [awwwards.com](https://awwwards.com)
-- [mobbin.design](https://mobbin.design)
-- [minimal.gallery](https://minimal.gallery)
-- [wellcoded.co](https://wellcoded.co)
+**Die 3-Sekunden-Regel:**
+Ein Besucher entscheidet in den ersten 3 Sekunden, ob er bleibt. Diese Regel ist natürlich nicht in Stein gemeißelt, gilt aber zumindest sie als Daumenregel.
 
-**Als (Web)Designer sollte man:**
-- Trends verstehen, aber nicht blind folgen
-- Technische Machbarkeit einschätzen
-- User Experience analysieren
-- Eigenen Stil entwickeln
+**Daher muss sofort klar sein:**
+- Wer bist du?
+- Was machst du?
+- Warum sollte ich bleiben?
 
-**Achten Sie auf:**
-- Warum funktioniert diese Website gut?
-- Wie ist die Navigation gelöst?
-- Wie werden Bilder präsentiert?
-- Gibt es Animationen, die die Seite besonders machen?
 
 ---
 
-## Praxis: Unsere erste HTML/CSS Seite
+## Content-Audit: Was brauche ich?
 
-**Wir erstellen gemeinsam:**
-- Eine simple Portfolio-Startseite
-- Mit HTML-Struktur
-- Mit CSS-Styling
-- Responsive Grundlagen
+**Bilder:**
+- Welche 10-15 besten Arbeiten?
+- Passen sie stilistisch zusammen?
 
-**Sie lernen dabei:**
-- Wie Code und Darstellung zusammenhängen
-- Warum Framer/Webflow im Hintergrund ähnlich arbeiten
-- Das Fundament aller Websites
+**Texte:**
+- Kurze Selbstbeschreibung (2-3 Sätze)
+- Projekt-Beschreibungen
+- Kontaktinformationen
 
-[![Edit 01_02: Praxis Start](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/5l9nfp)
+**Organisatorisches:**
+- Social Media Accounts
+- Impressum / Datenschutz
 
-![HTML Praxis](../../assets/01-praxis_html_css.png)
+**Qualität vor Quantität:** Lieber 10 exzellente Bilder als 30 mittelmäßige. Oder 3-5 Projekte vor 8.
 
----
-
-## HTML Grundstruktur
-
-```html
-<!-- index.html -->
-
-<!DOCTYPE html>
-<html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Max Mustermann - Fotograf</title>
-	</head>
-	<body>
-		<!-- Header-Bereich mit Name und Beruf und Instagram -->
-		<header>
-			<h1>Max Mustermann</h1>
-			<p>Fotograf aus München</p>
-
-			<a
-				href="https://instagram.com/d.tampe"
-				target="_blank"
-				style="margin-top: 10px; display: inline-block"
-			>
-				<img
-					src="https://api.iconify.design/ph:instagram-logo.svg"
-					style="width: 24px"
-				/>
-			</a>
-		</header>
-
-		<!-- Hauptinhalt der Seite -->
-		<main>
-			<section class="portfolio">
-				<h2>Meine Arbeiten</h2>
-				<p>Spezialisiert auf Portraits</p>
-
-				<!-- Bildergalerie mit 6 Beispielbildern -->
-				<div class="gallery">
-					<div class="gallery-item">
-						<img src="/images/01.webp" alt="Bild 1" />
-					</div>
-					<div class="gallery-item">
-						<img src="/images/02.webp" alt="Bild 2" />
-					</div>
-					<div class="gallery-item">
-						<img src="/images/03.webp" alt="Bild 3" />
-					</div>
-					<div class="gallery-item">
-						<img src="/images/04.webp" alt="Bild 4" />
-					</div>
-					<div class="gallery-item">
-						<img src="/images/05.webp" alt="Bild 5" />
-					</div>
-					<div class="gallery-item">
-						<img src="/images/06.webp" alt="Bild 6" />
-					</div>
-				</div>
-			</section>
-		</main>
-	</body>
-</html>
-```
-
-![HTML Only Praxis](../../assets/01-praxis_html_only.png)
 
 ---
 
-## CSS Styling hinzufügen
+## Wireframing
 
- Um die Webseite ansprechend zu gestalten und die Bilder optimal anzuordnen, stylen wir die Seite mit CSS. Dies umfasst die Implementierung einer Galerie mit drei Spalten, in der die Bilder gleichmäßig hoch dargestellt werden. Dafür muss die Datei `style.css` erstellt werden und auch in die `index.html` Datei eingebunden werden.
+**Was sind Wireframes?** 
 
-```html
-<!-- index.html -->
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Max Mustermann - Fotograf</title>
-	<link rel="stylesheet" href="style.css" /> <!-- <- Diese Zeile -->
-</head>
-<body>
-<!-- [...] -->
-```
+Einfache Skizzen, die zeigen:
+- Wo kommen welche Elemente hin?
+- Wie groß sind die Bereiche?
+- Wie ist die Hierarchie?
 
-```css
-/* style.css */
+**Wireframe-Elemente:**
 
-/* Reset: Entfernt Browser-Standard-Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+- Rechtecke: Container, Bereiche
+- Kreuz im Rechteck: Bild-Platzhalter
+- Horizontale Linien: Text
+- Rechteck mit Text: Button
 
-/* Grundlegende Body-Styles */
-body {
-  font-family: -apple-system, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Header-Styling mit grauem Hintergrund */
-header {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f8f8f8;
-}
-
-/* Große Hauptüberschrift */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-/* Portfolio-Sektion mit begrenzter Breite und zentriert */
-.portfolio {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Bildergalerie als CSS Grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Spalten auf Desktop */
-  gap: 20px; /* Abstand zwischen den Bildern */
-  margin-top: 40px;
-}
-
-/* Styling für die Galerie-Bilder */
-.gallery-item img {
-  width: 100%; /* Bild füllt Container aus */
-  height: 250px; /* Feste Höhe für einheitliches Raster */
-  object-fit: cover; /* Bild wird zugeschnitten, behält Proportionen */
-  border-radius: 8px; /* Abgerundete Ecken */
-  transition: transform 0.3s ease; /* Weiche Animation für Hover-Effekt */
-}
-```
-
-![HTML + CSS Praxis](../../assets/01-praxis_html_css.png)
+![Wireframing Miro](../../assets/01-wireframing_miro.png)
+[Bild Quelle](https://miro.com/templates/wireframe/)
 
 ---
+
+## Praxis: Wireframe auf Papier
+
+Skizziere 2-3 Layout-Ideen für deine Portfolio-Startseite.
+
+![Wireframe Lofi](../../assets/01-wireframing_lofi.png)
+[Bild Quelle](https://learntocodewith.me/learn/wireframing/)
+
+---
+
 ## Hausaufgabe
 
-**Aufgabe:** Finden Sie 3 inspirierende Portfolio-Websites
-
-- Screenshots der Elemente oder Seiten die Ihnen gut gefallen
-- 1-2 Sätze: Was gefällt Ihnen und warum?
-- Behalten Sie im Hinterkopf, dass Sie die ihr Portfolio selbst bauen müssen
-
-**Tipps:** Nutzen Sie die vorgestellten Quellen als Startpunkt
-
-
----
-
-## Weiterführende Links:
-
-- [HTML einfach verstehen](https://www.schulhomepage.de/webdesign/html)
-- [Einstieg in HTML](https://wiki.selfhtml.org/wiki/Einstieg_in_HTML)
-- [Einstieg in CSS](https://wiki.selfhtml.org/wiki/Einstieg_in_CSS)
+- Gedanken machen, welche Arbeiten du gerne zeigen würdest.
+- Kurze Selbstbeschreibung schreiben (2-3 Sätze)
+- Kontaktinformationen zusammenstellen
+- Alles am besten als Notiz oder Worddokument.

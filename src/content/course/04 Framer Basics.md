@@ -1,7 +1,7 @@
 ---
 title: 04 Framer Basics
-description: "Praktische Einführung in Framer als Tool zur Umsetzung von Portfolio-Websites. Der Workflow führt Schritt für Schritt durch den Prozess: vom Aufsetzen des Design Systems über das Erstellen der Navigation bis hin zur responsiven Anpassung für verschiedene Bildschirmgrößen. Ergänzend wird das CMS-System für Portfolio-Projekte und der Import aus Figma behandelt."
-date: 2025-12-01
+description: "Praktische Einführung in Framer als Tool zur Umsetzung von Portfolio-Websites. Der Workflow Prozess: Aufsetzen des Design Systems über das Erstellen der Navigation bis hin zur responsiven Anpassung für verschiedene Bildschirmgrößen."
+date: 2026-10-06
 slides: https://www.figma.com/deck/SYgroPkWJYfk5ZWHz8guR5
 image: /src/assets/04-cover.jpg
 ---
@@ -9,19 +9,20 @@ image: /src/assets/04-cover.jpg
 
 Framer ist kein ausschließlicher No-Code Website-Builder sondern auch ein Design Tool. 
 
-*"Warum haben wir dann Figma gelernt?"*
-Weil es ein Industriestandard für UI Design ist und Sie damit breiter aufgestellt sind.
+*"Warum haben wir dann Figma gelernt?"*\
+Weil Figma in vielen Unternehmen für UI Design genutzt wird und ihr damit breiter aufgestellt seid. Framer ist nischig.
 
 Framer bietet aber und eignet sich besonders gut:
-- Direkten Import aus Figma (in einigen Fällen)
-- Integriertes Hosting
+- Sehr guter und intuitiver Editor für Neueinsteiger
+- Direkten Import aus Figma (in einigen Fällen möglich)
+- Integriertes, schnelles Hosting
 - Portfolios, Marketing Seiten
-- Kein Code nötig (aber möglich und mit React da auch sehr mächtig)
+- Kein Code nötig (aber möglich und mit React auch sehr mächtig)
 
 ---
 ## Wann nicht Framer?
 
-- Wenn Sie Backend Funktionalitäten brauchen (z.b. eine extra Datenbank, komplexe Business-Logic)
+- Wenn du Backend Funktionalitäten brauchst (z.b. eine extra Datenbank, komplexe Business-Logic)
 - Bei sehr komplexen Webseiten mit bsp. Mitglieder Funktionalitäten, o.Ä.
 - Web-Apps
 
@@ -41,7 +42,7 @@ Die Dokumentation ist auf Englisch, aber sehr verständlich und mit vielen Video
 ---
 ## Interface: Ähnlichkeiten zu Figma
 
-**Das meiste kennen Sie schon**
+**Das meiste kennst du schon**
 
 - Canvas, Layers Panel, Properties Panel
 - Frames, Auto Layout (heißt hier Stack), Komponenten
@@ -54,7 +55,7 @@ Die Dokumentation ist auf Englisch, aber sehr verständlich und mit vielen Video
 - Preview zeigt echte Website
 - Pages Panel für Seitenstruktur
 
-Wenn Sie Figma können, finden Sie sich schnell zurecht.
+Wenn du Figma kannst, findest du dich schnell zurecht.
 
 ![Framer UI](../../assets/04-framer-ui.png)
 
@@ -76,7 +77,7 @@ Jeder Schritt baut mehr oder weniger auf dem vorherigen auf.
 
 ## Schritt 1: Design System aufsetzen
 
-**Warum zuerst?** Wenn Sie später Farben oder Schriften ändern wollen, ändern Sie es einmal statt 50x.
+**Warum zuerst?** Wenn du später Farben oder Schriften ändern willst, änderst du es einmal statt 50x.
 
 **Variables anlegen:**
 
@@ -96,7 +97,7 @@ Jeder Schritt baut mehr oder weniger auf dem vorherigen auf.
 
 ## Schritt 2: Navigation bauen
 
-**Falls Sie die Navigation bereits in Figma haben:**
+**Falls du die Navigation bereits in Figma hast:**
 1. Navigation in Figma auswählen
 2. Plugin "Figma to Html" öffnen
 3. In Framer einfügen
@@ -108,7 +109,7 @@ Jeder Schritt baut mehr oder weniger auf dem vorherigen auf.
 - Abstände mit Variables
 - Als Komponente speichern (Cmd/Ctrl + Alt + K)
 
-Die Komponente können Sie später auf jeder Seite wiederverwenden oder in ein Template einbauen.
+Die Komponente kannst du später auf jeder Seite wiederverwenden oder in ein Template einbauen.
 
 ---
 
@@ -131,7 +132,7 @@ Ein Grundlayout das Seiten zugewiesen werden kann. Fügt dann allen Seiten die S
 
 ### Option 1: Aus Figma kopieren
 
-Voraussetzung: Ihr Figma-Design muss Auto Layout verwenden.
+Voraussetzung: Dein Figma-Design muss Auto Layout verwenden.
 1. Section in Figma auswählen
 2. "Figma to Html"- Plugin öffnen
 3. Copy to Clipboard klicken
@@ -164,7 +165,7 @@ Stacks und Grids sind essentiell - ohne Stacks kein Responsive Design.
 **Jetzt kommt der wichtigste Teil**
 
 1. Breakpoint auf Mobile wechseln (Toolbar oben)
-2. Ihre Desktop-Section sehen Sie jetzt in Mobile-Ansicht
+2. Deine Desktop-Section siehst du jetzt in Mobile-Ansicht
 3. Anpassungen vornehmen:
     - Stack Direction ändern (z.B. horizontal → vertikal)
     - Schriftgrößen reduzieren
@@ -173,7 +174,7 @@ Stacks und Grids sind essentiell - ohne Stacks kein Responsive Design.
 
 **Section für Section durchgehen:** Nicht alles auf einmal - jede Section einzeln für Mobile anpassen.
 
-**Preview testen:** Cmd/Ctrl + P öffnet Preview in neuem Tab - testen Sie alle Breakpoints.
+**Preview testen:** Cmd/Ctrl + P öffnet Preview in neuem Tab - teste alle Breakpoints.
 
 ![Framer Responsivenes](../../assets/04-responsive.png)
 
@@ -195,19 +196,19 @@ Im Endeffekt wiederholen wir Schritt 4 und Schritt 5 bis wir eine komplette Seit
 ---
 ## Tipp: Bilder hochladen
 
-#### Vorbereitung: Exportieren Sie Ihre Bilder aus Lightroom/Photoshop
+#### Vorbereitung: Exportiere deine Bilder aus Lightroom/Photoshop
 - 2000-3000px Breite
 - JPEG, 80-90% Qualität
 - Unter 2MB
 
 #### Optimierung in Framer
-Framer konvertiert automatisch zu WebP, erstellt responsive Varianten und aktiviert Lazy Loading. Sie müssen nichts weiter tun.
+Framer konvertiert automatisch zu WebP, erstellt responsive Varianten und aktiviert Lazy Loading. Du musst nichts weiter tun.
 
 ---
 ## Tipp: Videos hochladen
 
 #### Lange Videos (mehr als 30-60sek)
-Laden Sie diese Videos auf Youtube oder Vimeo hoch um Bandbreite zu sparen und eine bessere Video Experience zu bieten. Sie können die Videos einbetten.
+Lade diese Videos auf Youtube oder Vimeo hoch um Bandbreite zu sparen und eine bessere Video Experience zu bieten. Du kannst die Videos einbetten.
 
 #### Kurze Videos und Clips
 - Mit Tools wie Handbrake oder Adobe Media Encoder konvertieren

@@ -1,10 +1,33 @@
 ---
-title: 03 Figma Grundlagen
-description: Einführung in Figma als Design-Tool für Websites. Von grundlegenden Werkzeugen wie Frames und Auto Layout über Design-Prinzipien wie Typescales, Grids und Breakpoints bis zum Prototyping-Modus – alles Wichtige für die Gestaltung responsiver Designs.
-date: 2025-10-20
+title: 02 Figma Grundlagen
+description: Einführung in Figma als Design-Tool für Websites. Von Inspirationsquellen zu Design-Prinzipien wie Typescales, Grids und Breakpoints und dem Prototyping-Modus.
+date: 2026-10-06
 slides: https://www.figma.com/deck/EzWRNG9U3r7I1cKjybMmha
-image: /src/assets/03-cover.jpg
+image: /src/assets/02-cover.jpg
 ---
+## Inspirationsquellen für Webdesign
+
+Gute Inspirationen im Bereich Webdesign sind nicht immer leicht zu finden, aber es gibt einige Websites, die ich auf jeden Fall empfehlen kann. Diese legen großen Wert auf hochwertiges Webdesign und präsentieren Beispiele aus der Praxis – nicht nur UI-Designs, die auf Screenshots vielleicht toll aussehen, aber in der Praxis nicht wirklich funktionieren. Viele Designs von Dribbble und Behance scheitern, weil sie aus UX-Sicht nicht funktionieren.
+
+- [awwwards.com](https://awwwards.com)
+- [mobbin.design](https://mobbin.design)
+- [minimal.gallery](https://minimal.gallery)
+- [wellcoded.co](https://wellcoded.co)
+
+**Als (Web)Designer solltest du:**
+- Trends verstehen, aber nicht blind folgen
+- Technische Machbarkeit einschätzen
+- User Experience analysieren
+- Eigenen Stil entwickeln
+
+**Achte auf:**
+- Warum funktioniert diese Website gut?
+- Wie ist die Navigation gelöst?
+- Wie werden Bilder präsentiert?
+- Gibt es Animationen, die die Seite besonders machen?
+
+---
+
 ## Warum Figma?
 
 **Figma ist der Industry-Standard für UI/UX Design**
@@ -32,7 +55,7 @@ image: /src/assets/03-cover.jpg
 
 ## Die Figma Dokumentation
 
-![Figma Help Page](../../assets/03-figma-docs.png)
+![Figma Help Page](../../assets/02-figma-docs.png)
 
 Figma ist zu komplex für rein frontale Vermittlung, daher empfehle ich folgende Ressourcen um Figma zu "wirklich" zu lernen.
 
@@ -48,7 +71,7 @@ Die Dokumentation ist auf Englisch, aber sehr verständlich mit Videos ergänzt.
 
 ## Interface-Überblick
 
-![Figma Interface Colored](../../assets/03-figma-screenshot-colored.png)
+![Figma Interface Colored](../../assets/02-figma-screenshot-colored.png)
 
 **Hauptbereiche:**
 
@@ -58,7 +81,7 @@ Die Dokumentation ist auf Englisch, aber sehr verständlich mit Videos ergänzt.
 - Seiten
 
 **Mitte (Gelb): Canvas**
-- Ihr Arbeitsbereich
+- Dein Arbeitsbereich
 - (Quasi) Unendliches Canvas
 
 **Rechts (Grün): Properties Panel**
@@ -73,30 +96,28 @@ Die Dokumentation ist auf Englisch, aber sehr verständlich mit Videos ergänzt.
 
 ## Frames
 
-**Wofür sind Frames gedacht?**
-Frames sind Container für Ihr Design – denken Sie an Artboards in anderen Design-Tools.
+**Wofür sind Frames gedacht?**\
+Frames sind Container für dein Design – denk an Artboards in anderen Design-Tools.
 
 **Verwendung:**
-- Definieren Sie Bildschirmgrößen (Desktop: 1920px, Mobile: 375px)
-- Jede Seite Ihrer Website ist ein Frame
+- Definiere Bildschirmgrößen (Desktop: 1920px, Mobile: 375px)
+- Jede Seite deiner Website ist ein Frame
 - Frames können verschachtelt werden
 - Haben eigene Eigenschaften (Hintergrund, Radius, Schatten)
 
 **Frames sind die Grundlage für responsive Designs und Prototypen.**
 
-![Figma Frame](../../assets/03-figma-frame.png)
+![Figma Frame](../../assets/02-figma-frame.png)
 [Bild Quelle](https://help.figma.com/hc/en-us/articles/360041539473-Frames-in-Figma-Design)
 
 ---
 
 ## Gruppen
 
-**Wofür sind Gruppen gedacht?**
+**Wofür sind Gruppen gedacht?**\
 Gruppen organisieren mehrere Elemente ohne eigene visuelle Eigenschaften.
 
-**Frames vs. Gruppen**
-Frames dienen als strukturierte Container, die Funktionen wie Auto Layout, Constraints und responsive Design-Verhalten unterstützen, während Gruppen hauptsächlich zur einfachen Organisation von Elementen ohne diese fortgeschrittenen Funktionen dienen.
-
+**Frames vs. Gruppen:**\
 Frames dienen als strukturierte Container, die Funktionen wie Auto Layout, Constraints und responsive Design-Verhalten unterstützen, während Gruppen hauptsächlich zur einfachen Organisation von Elementen ohne diese fortgeschrittenen Funktionen dienen.
 
 **Verwendung:**
@@ -108,7 +129,7 @@ Frames dienen als strukturierte Container, die Funktionen wie Auto Layout, Const
 
 ## Auto Layout
 
-**Wofür ist Auto Layout gedacht?**
+**Wofür ist Auto Layout gedacht?**\
 Auto Layout macht Frames flexibel und responsive – Elemente ordnen sich automatisch an und passen sich an.
 
 **Eigenschaften:**
@@ -121,14 +142,14 @@ Auto Layout macht Frames flexibel und responsive – Elemente ordnen sich automa
 
 Weitere Infos zu Auto Layouts: https://help.figma.com/hc/de/articles/360040451373-Leitfaden-zum-Auto-Layout
 
-![Figma Autolayout](../../assets/03-figma-auto_layout.png)
+![Figma Autolayout](../../assets/02-figma-auto_layout.png)
 [Bild Quelle](https://help.figma.com/hc/de/articles/360040451373-Leitfaden-zum-Auto-Layout)
 
 ---
 
 ## Komponenten
 
-**Wofür sind Komponenten gedacht?**
+**Wofür sind Komponenten gedacht?**\
 Komponenten sind wiederverwendbare Design-Elemente – einmal erstellen, überall nutzen, zentral ändern. Man kann auch Varianten von Komponenten erstellen.
 
 **Verwendung:**
@@ -144,14 +165,14 @@ Komponenten sind wiederverwendbare Design-Elemente – einmal erstellen, überal
 
 **In Framer werden aus Figma-Komponenten oft direkt funktionale Elemente.**
 
-![Figma Components](../../assets/03-figma-components.png)
+![Figma Components](../../assets/02-figma-components.png)
 [Bild Quelle](https://help.figma.com/hc/de/articles/360039150173-Komponenteninstanzen-erstellen-und-einf%C3%BCgen)
 
 ---
 
 ## Variablen & Styles
 
-**Wofür sind Variablen und Styles gedacht?**
+**Wofür sind Variablen und Styles gedacht?**\
 Zentrale Definition von Design-Tokens, die im gesamten Design wiederverwendet werden – eine Änderung, überall wirksam.
 
 **Verwendung:**
@@ -167,8 +188,8 @@ Mehr Informationen: https://help.figma.com/hc/en-us/articles/15339657135383-Guid
 ---
 ## Prototyping-Modus
 
-**Wofür ist der Prototyping-Modus gedacht?**
-Im Prototyping-Modus können Sie Interaktionen und Übergänge zwischen Seiten definieren – ohne Code.
+**Wofür ist der Prototyping-Modus gedacht?**\
+Im Prototyping-Modus kannst du Interaktionen und Übergänge zwischen Seiten definieren – ohne Code.
 
 **Verwendung:**
 - Navigation testen: Von Startseite zu Portfolio
@@ -181,20 +202,20 @@ Im Prototyping-Modus können Sie Interaktionen und Übergänge zwischen Seiten d
 - Elemente verbinden durch Ziehen
 - Interaktionen definieren (Click, Hover, etc.)
 
-**Für Ihre Zwischenabgabe können Sie so Ihr Design interaktiv präsentieren.**
+**Für deine Zwischenabgabe kannst du so dein Design interaktiv präsentieren.**
 
-![Figma Prototyping](../../assets/03-figma-prototype_panel.png)
+![Figma Prototyping](../../assets/02-figma-prototype_panel.png)
 [Bild Quelle](https://help.figma.com/hc/de/articles/360040314193-Einf%C3%BChrung-in-Prototyping-in-Figma)
 
 ---
 
 ##  Typografie (und Typescales)
 
-![Figma Typescales](../../assets/03-figma-typescales.png)
+![Figma Typescales](../../assets/02-figma-typescales.png)
 [Bild Quelle](https://www.figma.com/community/plugin/739825414752646970/typescales)
 
-**Wofür sind Typescales gedacht?**
-Typescales definieren ein konsistentes System von Schriftgrößen für Ihre gesamte Website.
+**Wofür sind Typescales gedacht?**\
+Typescales definieren ein konsistentes System von Schriftgrößen für deine gesamte Website.
 
 **Typische Hierarchie:**
 - H1: 48-72px (Hauptüberschrift)
@@ -209,7 +230,7 @@ Typescales definieren ein konsistentes System von Schriftgrößen für Ihre gesa
 3. Profit.
 
 **Tipps:**
-- Definieren Sie 4-6 Größen, nicht mehr
+- Definiere 4-6 Größen, nicht mehr
 - Verhältnis zwischen Größen beachten (z.B. 1.5x Faktor)
 - Text Styles in Figma anlegen für Konsistenz
 - Überspringen von einer Schriftgröße hilft visuell oft bei der Unterscheidung der Größen
@@ -222,10 +243,10 @@ Web Tool: https://typescale.com/
 ---
 ## Abstände: 4pt/8pt Grid
 
-![Figma Typescales](../../assets/03-8pt-grid.png)
+![Figma Typescales](../../assets/02-8pt-grid.png)
 [Bild Quelle](https://cieden.com/book/sub-atomic/spacing/choosing-a-spacing-system)
 
-**Wofür ist ein Spacing-System gedacht?**
+**Wofür ist ein Spacing-System gedacht?**\
 Ein konsistentes Abstandssystem sorgt für visuellen Rhythmus und erleichtert responsive Umsetzung.
 
 **Zwei gängige Systeme:**
@@ -247,10 +268,10 @@ Ein konsistentes Abstandssystem sorgt für visuellen Rhythmus und erleichtert re
 ---
 ## Layout: 12 Grid
 
-![Figma Typescales](../../assets/03-12_grid.png)
+![Figma Typescales](../../assets/02-12_grid.png)
 [Bild Quelle](https://www.figma.com/community/file/1450936962822293368)
 
-**Wofür ist das 12er Grid gedacht?**
+**Wofür ist das 12er Grid gedacht?**\
 Das 12-Spalten-Grid ist der Standard für responsive Webdesign und hilft bei der Ausrichtung von Inhalten.
 
 **Warum 12 Spalten?**
@@ -262,17 +283,17 @@ Das 12-Spalten-Grid ist der Standard für responsive Webdesign und hilft bei der
 ---
 ## Breakpoints
 
-**Was sind Breakpoints?**
-Breakpoints definieren, bei welchen Bildschirmbreiten sich Ihr Layout anpasst – essentiell für responsive Design.
+**Was sind Breakpoints?**\
+Breakpoints definieren, bei welchen Bildschirmbreiten sich dein Layout anpasst – essentiell für responsive Design.
 
 **Standard Breakpoints:**
 - **Desktop:** 1920px
-- **Laptop:** 1440px (Design-Breite)
+- **Laptop:** 1200px / 1440px (Design-Breite)
 - **Tablet:** 768px
 - **Mobile:** 390px (iPhone Standard)
 
 **Verwendung in Figma:**
-- Erstellen Sie Frames für mindestens Laptop und Mobile
+- Erstelle Frames für mindestens Laptop und Mobile
 - Navigation: Horizontal → Hamburger-Menü
 - z.b. im Grid: 3 Spalten → 2 Spalten → 1 Spalte
 
@@ -286,10 +307,17 @@ Breakpoints definieren, bei welchen Bildschirmbreiten sich Ihr Layout anpasst �
 
 - Desktop Frame: 1440px oder 1512px Breite
 - Eigene Inhalte verwenden falls vorhanden
-- Versuchen Sie ein Auto Layout für die Navigation zu verwenden
+- Versuche ein Auto Layout für die Navigation zu verwenden
 - Mindestens eine Komponente erstellen (z.b. Button)
 
 **Optional:**
 - Weitere Unterseiten designen
 - Prototype-Links zwischen Seiten
 - Mobile-Version (375px) beginnen
+
+**Inspiration sammeln**
+- Finde 3 inspirierende Portfolio-Websites
+- Screenshots der Elemente oder Seiten, die dir gut gefallen
+- 1-2 Sätze: Was gefällt dir und warum?
+- Behalte im Hinterkopf, dass du dein Portfolio selbst bauen musst
+- Nutze die vorgestellten Quellen als Startpunkt
