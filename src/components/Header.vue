@@ -56,11 +56,11 @@ onMounted(() => {
   >
     <!-- announcement -->
     <Announcement
-      href="https://forms.gle/JNeUGmtXGHkwuw517"
+      href="https://forms.gle/YNUVgKrZCsYuejgk8"
       type="rainbow"
-      expires-at="2026-01-29 23:59"
+      expires-at="2026-11-26 23:59"
     >
-      Hier Abgabe WiSe 2025/26 einreichen
+      Hier Zwischenabgabe WiSe 2026/27 einreichen
     </Announcement>
 
     <div class="px-6 h-20 flex items-center relative gap-4 md:gap-6">
